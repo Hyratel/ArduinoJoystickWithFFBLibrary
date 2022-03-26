@@ -11,23 +11,20 @@
 
 ### 1. create `JoyStick` object
 
-| params            | describe                                     |
-|:------------------|:---------------------------------------------|
-| REPORT_ID         | Hid report id                                |
-| JOYSTICK_TYPE     | Type of devece：JOYSTICK，GAMEPAD，MULTI_AXIS |
-| button count      | `[0-32]`                                     |
-| Hat Switch count  | `[0,1,2]`                                    |
-| X Axis enable     | True or False                                |
-| Y Axis enable     | True or False                                |
-| Z Axis enable     | True or False                                |
-| Rx Axis enable    | True or False                                |
-| Ry Axis enable    | True or False                                |
-| Rz Axis enable    | True or False                                |
-| Rudder enable     | True or False                                |
-| Throttle enable   | True or False                                |
-| Accelerator enable| True or False                                |
-| Brake enable      | True or False                                |
-| Steering enable   | True or False                                |
+| params            | describe                                     |default |
+|:------------------|:---------------------------------------------|:-------|
+| REPORT_ID         | Hid report id                                |        |
+| JOYSTICK_TYPE     | Type of device JOYSTICK, GAMEPAD, MULTI_AXIS |JOYSTICK|
+| button count      | `[0-32]`                                     |8       |
+| Hat Switch count  | `[0,1,2]`                                    |0       |
+| X Axis enable     | True or False                                |true    |
+| Y Axis enable     | True or False                                |true    |
+| Z Axis enable     | True or False                                |false   |
+| Rx Axis enable    | True or False                                |false   |
+| Ry Axis enable    | True or False                                |false   |
+| Rz Axis enable    | True or False                                |false   |
+| Slider enable     | True or False                                |false   |
+| Dial enable       | True or False                                |false   |
 
 `Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,JOYSTICK_TYPE_JOYSTICK,8, 0,false, true,true,false, false, false,false, false,false, false, false);`
 
@@ -176,5 +173,7 @@ range`[-255,255]`
 
 ## Ref
 
-### This library is based on [Heironimus](https://github.com/MHeironimus/ArduinoJoystickLibrary) and [hoantv](https://github.com/hoantv/VNWheel) 's work，very grateful for their work.
+### This library is based on [Heironimus](https://github.com/MHeironimus/ArduinoJoystickLibrary) and [hoantv](https://github.com/hoantv/VNWheel) 's work，very grateful for their work. 
+
+### This fork removes the Simulation axes and adds Slider and Dial axes, mapped as Axis\#7 and Axis\#8 in DirectInput
 
